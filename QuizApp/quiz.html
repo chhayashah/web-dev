@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@1,200;1,300&family=Lato&family=Poppins:wght@400;500;600;700;800;900&family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">  -->
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <section class="main">
+
+        <div id="container">
+            <div class="col">
+            <h2 id="questionBox">1) This is a dummy question</h2>
+            <div class="box">
+                <input class="options" id="first" type="radio" value="a" name="option"/>
+                <label for="first">a) Option 1</label>
+            </div>
+            <div class="box">
+                <input class="options" id="second" type="radio" value="b" name="option"/>
+                <label for="second">b) Option 2</label>
+            </div>
+            <div class="box">
+                <input class="options" id="third" type="radio" value="c" name="option"/>
+                <label for="third">c) Option 3</label>
+            </div>
+            <div class="box">
+                <input class="options" id="fouth" type="radio" value="d" name="option"/>
+                <label for="fouth">d) Option 4</label>
+            </div>
+            <button class="btn" onclick="subQuiz()"> Submit </button>
+        </div>
+    </section>
+    <script src="quiz.js"></script>
+</body>
+</html>
