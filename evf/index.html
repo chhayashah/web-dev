@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV AxiS</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="flex-container" id="NavBar">
+        <div class="logo" >
+            <img src="images/logo.jpg" alt="EV AxiS" width="215" height="60">
+        </div>
+        <div class="right">
+            <div class="right-ele">
+                <a class="link popover-open locale-link" href="#" data-popover=".popover-language"> 
+                    <img src="https://static.chargefinder.com/images/en.svg" alt="" width="50" height="50">
+                </a>
+            </div>
+            <div class="right-ele">
+                <a class="link external" href="mailto:pallavi04pallavi@gmail.com" target="_system">
+                    <img src="images/mail(1).png" alt="" width="60" height="60"> 
+                </a>
+            </div>
+            <div class="right-ele">
+                <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+            </div>
+            <div class="right-ele">
+                <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Register</button>
+            </div>
+            <div class="right-ele">
+                <button> <a href="#payment" target="_self">Payment</a></button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="topic">
+        <h2><marquee class="blink" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+            Find Charging Stations on the map.
+        </marquee></h2>
+    </div>
+
+    <section id="home" class="fl">
+        <div class="container">
+            <div class="frame">
+              
+              <iframe class="iff" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d466632.78309343057!2d82.3545793536655!3d23.97568988240247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1677616464680!5m2!1sen!2sin" width="5000px" height="1000px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div>
+                <form action="https://www.google.com/search" method="get" class="search-bar">
+                    <input type="text" placeholder="Search city, place or state." name="q">
+                    <button type="submit">GO</button>
+            </div>
+            
+          </form>
+      </div>
+      </section>
+
+
+
+
+
+
+ <!-- -------------------------------Button to open the modal login form -->
+ 
+ <!-- The Modal -->
+ <div id="id01" class="modal">
+   <span onclick="document.getElementById('id01').style.display='none'"
+ class="close" title="Close Modal">&times;</span>
+ 
+   <!-- Modal Content -->
+   <form class="modal-content animate" action="login.php" method="post">
+     <div class="imgcontainer">
+       <img src="images/avatar.png" alt="Avatar" class="avatar">
+     </div>
+ 
+     <div class="container-MODAL">
+       <label for="uname"><b>Username</b></label>
+       <input type="text" placeholder="Enter Username" name="uname" required>
+ 
+       <label for="psw"><b>Password</b></label>
+       <input type="password" placeholder="Enter Password" name="psw" required>
+ 
+       <input name="submit" type="submit" value="Login" />
+       <label>
+         <input type="checkbox" checked="checked" name="remember"> Remember me
+       </label>
+     </div>
+ 
+     <div class="container-MODAL" style="background-color:#f1f1f1">
+       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+       <span class="psw">Forgot <a href="#">password?</a></span>
+     </div>
+   </form>
+ </div> 
+<!-- ------------------------------- login end----------------------------------- -->
+
+
+
+<!-- -----------------------------  register form start------------------------- -->
+
+<div id="id02" class="modal_reg">
+  
+  <form class="modal-content animate" action="register.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/avatar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container_reg">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <input type="submit" name="submit" value="Create Account">
+      <label>
+         Already have an account?
+      </label>
+    </div>
+
+    <div class="container_reg" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" id="#id01"><a href="#id01">Login</a></button>
+    </div>
+  </form>
+</div>
+
+
+<!-- -------------------------------- register end---------------------------- -->
+
+
+<!-- ---------------------- PAYMENT & BILLING start ----------------------------------  -->
+<section id="payment">
+<div class="row-B">
+    <div class="col-75">
+      <div class="container-B">
+        <form action="/action_page.php">
+        
+          <div class="row-B">
+            <div class="col-50">
+              <h3 style="color:black">Billing Address</h3>
+              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" name="email" placeholder="john@example.com">
+              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+              <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+              <label for="city"><i class="fa fa-institution"></i> City</label>
+              <input type="text" id="city" name="city" placeholder="New York">
+  
+              <div class="row-B">
+                <div class="col-50">
+                  <label for="state">State</label>
+                  <input type="text" id="state" name="state" placeholder="NY">
+                </div>
+                <div class="col-50">
+                  <label for="zip">Zip</label>
+                  <input type="text" id="zip" name="zip" placeholder="10001">
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-50">
+              <h3 style="color:black">Payment</h3>
+              <label for="fname">Accepted Cards</label>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+              <label for="cname">Name on Card</label>
+              <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+              <label for="ccnum">Credit card number</label>
+              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+              <label for="expmonth">Exp Month</label>
+              <input type="text" id="expmonth" name="expmonth" placeholder="September">
+              <div class="row">
+                <div class="col-50">
+                  <label for="expyear">Exp Year</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="2018">
+                </div>
+                <div class="col-50">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="352">
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+          </label>
+          <input type="submit" value="Continue to checkout" class="btn">
+        </form>
+      </div>
+    </div>
+    
+  </div>
+</section>
+<!-- ------------------------  BILLING & PAYMENT ------------------------------   -->
+
+<!-- --------------------------------------  FOOTER START ---------------------------------- -->
+
+   <footer class="footer-body">
+    <div class="row primary">
+        <div class="column about">
+            <h3 style="color: rgb(61, 52, 52)">Connect</h3>
+            <p>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>   EV AxiS Napier Town, Jabalpur
+            </p>
+            <div class="social">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+    
+        <div class="column link">
+            <h3 style="color: rgb(61, 52, 52)"> Links</h3>
+            <ul class="ul-col-link">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </div>
+    
+        <div class="column subscribe">
+            <h3 style="color: rgb(61, 52, 52)">Newsletter</h3>
+            <div class="mailId">
+               <input type="email" placeholder="Your email id here" />
+               <button>Subscribe</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row copyright">
+        <div class="footer-menu">    
+            <!-- <a href="">Home</a> -->
+            <a href="">F.A.Q</a>
+            <a href="">Cookies Policy</a>
+            <a href="">Terms Of Service</a>
+            <a href="">Support</a>
+        </div>
+        <div>
+            <p>Copyright &copy; 2023 EV AxiS. All Rights Reserved.</p>
+        </div>
+      </div>
+   </footer>
+<!-- -------------------- FOOTER ENDS ---------------------------------  -->
+
+
+    <script src="app.js"></script>
+</body>
+</html>
