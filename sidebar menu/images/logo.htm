@@ -1,0 +1,22 @@
+<html><head>
+<script type="text/javascript">
+    window.onload = function() {
+      var trk = "qf";
+      var cookies = document.cookie.split("; ");
+
+      if (window.location.protocol == "http:") {
+        // If "sl" cookie is set, redirect to https.
+        for (var i = 0; i < cookies.length; ++i) {
+          if ((cookies[i].indexOf("sl=") == 0) && (cookies[i].length > 3)) {
+            window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+            return;
+          }
+        }
+      }
+
+      window.location.href = "https://www.linkedin.com/authwall?trk=" + trk +
+          "&original_referer=" + document.referrer.substr(0, 200) +
+          "&sessionRedirect=" + encodeURIComponent(window.location.href);
+    }
+</script>
+</head></html>
